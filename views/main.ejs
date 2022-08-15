@@ -23,6 +23,9 @@
         <ul>
             <% console.log(videos) %>
             <% for (var i = 0; i < videos.length; i++) { %>
+                <% if (videos[i] == '.gitignore') { %>
+                    <% continue %>
+                <% } %>
                 <li>
                     <a href="/video/<%= videos[i] %>">
                         <%= videos[i] %>
