@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('templates/head') %>
+<body>
+    <%- include('templates/headerDefault') %>
+
+    <div class="container">
+        <h2>Video Stream Page</h2>
+        <% console.log(video) %>
+        <video width="80%" controls src="/uploads/<%=video%>" type="video/mp4"></video>
+    
+    </div>
+    <%- include('./templates/footer') %>
+
+</body>
+</html>

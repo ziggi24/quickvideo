@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('templates/head') %>
+<body>
+    <%- include('templates/headerContainer') %>
+
+    <div class="container">
+
+    <h2>Quick Video</h2>
+    <h3>Main Page</h3>
+    <!-- video select and upload form section  -->
+    <div class="video-select-form">
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <label for="video-select">Select Video</label>
+            <input type="file" name="file" id="video-select">
+            <input type="submit" value="Upload">
+        </form>
+    </div>
+    <hr>
+    <!-- list of previously uploaded videos with a play button on the side -->
+    <div class="video-list">
+        <h3>Uploaded Videos</h3>
+        <ul>
+            <% console.log(videos) %>
+            <% for (var i = 0; i < videos.length; i++) { %>
+                <li>
+                    <a href="/video/<%= videos[i] %>">
+                        <%= videos[i] %>
+                    </a>
+                </li>
+            <% } %>
+        </ul>
+    </div>
+</div>
+
+
+    <%- include('./templates/footer') %>
+
+</body>
+</html>

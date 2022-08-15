@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('templates/head') %>
+<body>
+    <%- include('templates/headerDefault') %>
+
+    <h2>Quick Video</h2>
+    <p>Register</p>
+    <br>
+    <form action="/register" method="POST">
+        <input type="text" name="user" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <input type="password" name="key">
+        <input type="submit" value="Register">
+    </form>
+
+
+    <%- include('./templates/footer') %>
+
+</body>
+</html>
